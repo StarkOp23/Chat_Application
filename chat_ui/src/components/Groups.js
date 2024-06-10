@@ -30,43 +30,43 @@ const Groups = () => {
                     <IconButton>
                         <SearchIcon />
                     </IconButton>
-                    <input placeholder='search' className={'search-box' + (lightTheme ? "" : "dark")} />
+                    <input placeholder='search' className='search-box' />
                 </div>
                 <div className='ug-list'>
                     <motion.div
                         whileHover={{ scale: 1.01 }}
                         whileTap={{ scale: 0.98 }}
-                        className={'list-item' + (lightTheme ? "" : "dark")}>
-                        <p className={'con-icon' + (lightTheme ? "" : "dark")}>T</p>
-                        <p className={'con-title' + (lightTheme ? "" : "dark")}>Test User</p>
+                        className='list-item'>
+                        <p className='con-icon' >T</p>
+                        <p className='con-title'>Test User</p>
                     </motion.div>
                     <motion.div
                         whileHover={{ scale: 1.01 }}
                         whileTap={{ scale: 0.98 }}
-                        className={'list-item' + (lightTheme ? "" : "dark")}>
-                        <p className={'con-icon' + (lightTheme ? "" : "dark")}>T</p>
-                        <p className={'con-title' + (lightTheme ? "" : "dark")}>Test User</p>
+                        className='list-item' >
+                        <p className='con-icon' >T</p>
+                        <p className='con-title' >Test User</p>
                     </motion.div>
                     <motion.div
                         whileHover={{ scale: 1.01 }}
                         whileTap={{ scale: 0.98 }}
-                        className={'list-item' + (lightTheme ? "" : "dark")}>
-                        <p className={'con-icon' + (lightTheme ? "" : "dark")}>T</p>
-                        <p className={'con-title' + (lightTheme ? "" : "dark")}>Test User</p>
+                        className='list-item' >
+                        <p className='con-icon' >T</p>
+                        <p className='con-title'>Test User</p>
                     </motion.div>
                     <motion.div
                         whileHover={{ scale: 1.01 }}
                         whileTap={{ scale: 0.98 }}
-                        className={'list-item' + (lightTheme ? "" : "dark")}>
-                        <p className={'con-icon' + (lightTheme ? "" : "dark")}>T</p>
-                        <p className={'con-title' + (lightTheme ? "" : "dark")}>Test User</p>
+                        className='list-item' >
+                        <p className='con-icon' >T</p>
+                        <p className='con-title' >Test User</p>
                     </motion.div>
                     <motion.div
                         whileHover={{ scale: 1.01 }}
                         whileTap={{ scale: 0.98 }}
-                        className={'list-item' + (lightTheme ? "" : "dark")}>
-                        <p className={'con-icon' + (lightTheme ? "" : "dark")}>T</p>
-                        <p className={'con-title' + (lightTheme ? "" : "dark")}>Test User</p>
+                        className='list-item' >
+                        <p className='con-icon' >T</p>
+                        <p className='con-title'>Test User</p>
                     </motion.div>
 
 
