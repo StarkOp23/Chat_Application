@@ -42,7 +42,7 @@ const Sidebar = () => {
     return (
         <div className='sidebar-container'>
             <div className={'sb-header' + ((lightTheme) ? "" : " dark ")}>
-                <div>
+                <div className="other-icons">
 
                     <IconButton>
                         <AccountCircleIcon className={'icon' + ((lightTheme) ? "" : " dark ")} />
