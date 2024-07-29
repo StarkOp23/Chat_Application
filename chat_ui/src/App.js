@@ -24,6 +24,7 @@ const App = () => {
           <Route path='user' element={<Users />}></Route>
           <Route path='groups' element={<Groups />}></Route>
           <Route path='create_groups' element={<CreateGroups />}></Route>
+          {/* Test */}
         </Route>
       </Routes>
     </div>
