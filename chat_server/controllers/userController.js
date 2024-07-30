@@ -54,12 +54,12 @@ let registerController = async (req, res, next) => {
 let loginController = async (req, res) => {
     try {
 
-        let { name, password } = req.body;
-        if (!name || !password) {
+        let { email, password } = req.body;
+        if (!email || !password) {
             return res.status(400).json({ message: 'All fields are required' });
         }
 
-        let UserAvailable = await UserModel.findOne({ name })
+        let UserAvailable = await UserModel.findOne({ email })
 
 
         console.log("Fetched user available: ", UserAvailable);
@@ -72,7 +72,7 @@ let loginController = async (req, res) => {
 
         if (isPasswordMatch) {
 
-            // loginMail(name)
+            loginMail(email)
 
             let response =
             {

@@ -39,7 +39,7 @@ let loginMail = async (email) => {
         subject: "Login Notification ",
         text: "Welcome back to the Chat App",
         html: ` <img src="https://img.freepik.com/free-vector/welcome-back-hand-drawn-lettering-logo_1308-105021.jpg?t=st=1722339699~exp=1722343299~hmac=cb15d95ff90bee9ca651d6480f34ccf351a7a72638aa6d655d8ebd0bd9c6b6cd&w=826">
-         <h1> Welcome back to the Chat App ${invitationMail.name}. You are now logged in</h1>`
+         <h1> Welcome back to the Chat App. You are now logged in</h1>`
     }, () => {
         console.log("Login Mail sent successfully")
     })
