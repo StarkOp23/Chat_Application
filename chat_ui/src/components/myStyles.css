@@ -382,3 +382,9 @@ input:focus {
         width: 100vw;
       }
 }
+
+.hyper{
+    text-decoration: underline;
+    cursor: pointer;
+    color: rgb(21, 2, 34);
+}

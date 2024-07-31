@@ -3,6 +3,17 @@ const UserModel = require('../models/userModel');
 const { invitationMail, loginMail } = require('../helper/mailHelper');
 const generateToken = require('../auth service/auth');
 const jwt = require('jsonwebtoken');
+// const Joi = require('joi');
+
+
+// let userValidationObject = Joi.object({
+
+//     name: Joi.string().min(4).max(10).required(),
+//     email: Joi.string().min().max().required(),
+//     password: Joi.string().min(8).max(20).required(),
+// })
+
+
 
 let registerController = async (req, res, next) => {
     try {
@@ -82,10 +93,10 @@ let loginController = async (req, res) => {
                 isAdmin: UserAvailable.isAdmin,
                 token: generateToken(UserAvailable._id)
             }
-            
+
             // console.log(response);
             return res.status(200).json({ error: false, message: "Login successful", data: response });
-            
+
         }
 
         res.status(404).json({ error: true, message: "Login failed , invalid credentials" })
@@ -97,5 +108,18 @@ let loginController = async (req, res) => {
 }
 
 
+let getAllUsers = async (req, res, next) => {
 
-module.exports = { registerController, loginController }
+    try {
+        // let { name, email } = req.user;
+        let users = await UserModel.find();
+        return res.status(200).json({ error: false, message: " Users fetched successfully", data: users })
+    } catch (error) {
+
+    }
+
+}
+
+
+
+module.exports = { registerController, loginController, getAllUsers }

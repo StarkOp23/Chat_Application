@@ -4,7 +4,13 @@ const app = express();
 app.use(express.json());
 require('./adapter/connectionDB')
 const userRoutes = require('./Routes/userRoutes');
+const cors = require('cors')
 
+app.use(
+    cors({
+        origin: "*",
+    })
+);
 
 app.use('/api/user', userRoutes);
 

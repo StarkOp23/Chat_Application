@@ -1,6 +1,9 @@
 const nodemailer = require('nodemailer');
 
 
+// Via Gmail
+
+
 let invitationMail = async (email, name) => {
     let transporter = nodemailer.createTransport({
         service: "Gmail",
@@ -21,7 +24,7 @@ let invitationMail = async (email, name) => {
     })
 }
 
-
+// Via Yahoo Mail
 
 let loginMail = async (email) => {
 

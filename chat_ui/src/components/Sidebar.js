@@ -7,7 +7,7 @@ import AddCircleIcon from "@mui/icons-material/AddCircle";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import NightlightIcon from '@mui/icons-material/Nightlight';
 import SearchIcon from '@mui/icons-material/Search';
-
+import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import { IconButton } from '@mui/material';
 import ConversationsItem from './ConversationsItem';
 import { useNavigate } from 'react-router-dom';
@@ -68,6 +68,14 @@ const Sidebar = () => {
                     }}>
                         {lightTheme && <NightlightIcon className={'icon' + ((lightTheme) ? "" : " dark ")} />}
                         {!lightTheme && <LightModeIcon className={'icon' + ((lightTheme) ? "" : " dark ")} />}
+                    </IconButton>
+                    <IconButton
+                        onClick={() => {
+                            localStorage.removeItem("userData");
+                            navigate("/");
+                        }}
+                    >
+                        <ExitToAppIcon className={"icon" + (lightTheme ? "" : " dark")} />
                     </IconButton>
                 </div>
 
