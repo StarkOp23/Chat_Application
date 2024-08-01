@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { createContext, useState } from 'react'
 import './myStyles.css'
 import Sidebar from './Sidebar'
 import ChatArea from './ChatArea'
@@ -11,6 +11,7 @@ import { Outlet } from 'react-router-dom'
 import Groups from './Groups'
 // import WorkArea from './WorkArea'
 
+export const myContext = createContext();
 
 const MainContainer = () => {
 

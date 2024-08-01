@@ -16,7 +16,7 @@ export default function Toaster({ message }) {
             <Snackbar
                 anchorOrigin={{
                     vertical: "top",
-                    horizontal: "right"
+                    horizontal: "middle"
                 }}
                 open={open}
                 autoHideDuration={3000}
@@ -33,7 +33,7 @@ export default function Toaster({ message }) {
                 ]}
             >
 
-                <Alert onClose={handleClose} severity="warning" sx={{ width: '30vw' }}>
+                <Alert onClose={handleClose} severity="warning" sx={{ width: '40vw' }}>
                     {message}
                 </Alert>
 

@@ -44,7 +44,7 @@ const Login = () => {
         } catch (error) {
 
             setLogInStatus({
-                msg: "Invalid User name or Password",
+                msg: "Wrong Credentials",
                 key: Math.random(),
             });
         }
@@ -136,14 +136,14 @@ const Login = () => {
                 </div>
                 {showlogin && (
                     <div className="login-box">
-                        <p className="login-text">Login to your Account</p>
+                        <p className="login-text">Welcome Back !</p>
                         <TextField
                             onChange={changeHandler}
                             id="standard-basic"
                             label="Enter Your Email Address"
                             variant="outlined"
                             color="secondary"
-                            name="name"
+                            name="email"
                             onKeyDown={(event) => {
                                 if (event.code == "Enter") {
                                     // console.log(event);
