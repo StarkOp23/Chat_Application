@@ -111,9 +111,9 @@ let loginController = async (req, res) => {
 let getAllUsers = async (req, res, next) => {
 
     try {
-        // let { name, email } = req.user;
-        let users = await UserModel.find();
-        return res.status(200).json({ error: false, message: " Users fetched successfully", data: users })
+        let { name, email } = req.user;
+        let users = await UserModel.find({}, { _id: 0 });
+        return res.status(200).json({ error: false, message: " Users fetched successfully", data: users, user: { name, email } })
     } catch (error) {
 
     }
