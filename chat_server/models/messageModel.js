@@ -7,7 +7,7 @@ const messageSchema = mongoose.Schema({
         ref: 'User'
     },
     content: {
-        type: string,
+        type: String,
         trim: true
     },
     receiver: {
@@ -25,5 +25,5 @@ const messageSchema = mongoose.Schema({
     }
 );
 
-const Message = mongoose.Model("Message", messageSchema)
+const Message = mongoose.model("Message", messageSchema)
 module.exports = Message;

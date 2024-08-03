@@ -4,6 +4,8 @@ const app = express();
 app.use(express.json());
 require('./adapter/connectionDB')
 const userRoutes = require('./Routes/userRoutes');
+const chatRoutes = require('./Routes/chatRoutes')
+const messageRoutes = require('./Routes/messageRoutes');
 const cors = require('cors')
 
 app.use(
@@ -13,6 +15,10 @@ app.use(
 );
 
 app.use('/api/user', userRoutes);
+
+app.use("/user", userRoutes);
+app.use('/chat', chatRoutes);
+app.use('/messages', messageRoutes)
 
 
 // !error handling middleware
