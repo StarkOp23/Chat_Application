@@ -245,8 +245,9 @@ input:focus {
     align-items: center;
     gap: 20px;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    color: rgba(0, 0, 0, 0.54);
+    /* color: rgba(0, 0, 0, 0.54); */
     /* border-bottom: 5px solid #63d7b0; */
+    background: url("https://img.freepik.com/free-photo/blue-concrete-textured-background_53876-139902.jpg?size=626&ext=jpg&ga=GA1.1.1308959851.1722339978&semt=ais_hybrid");
     border-radius: 20px;
 }
 
@@ -287,7 +288,8 @@ input:focus {
 
 .login-box {
     flex: 0.7;
-    background-color: white;
+    /* background-color: white; */
+    background: url("https://img.freepik.com/free-photo/blue-concrete-textured-background_53876-139902.jpg?size=626&ext=jpg&ga=GA1.1.1308959851.1722339978&semt=ais_hybrid");
     border-radius: 20px;
     margin: 10px;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -298,7 +300,12 @@ input:focus {
     justify-content: center;
     align-items: center;
     gap: 20px;
+    border: 3px ridge rgba(0, 0, 0, 0.575);
+
+    backdrop-filter: blur(20px);
+
 }
+
 
 .list-container {
     flex: 0.7;
@@ -488,16 +495,24 @@ input:focus {
     background-color: #b4c5c7ce !important;
     box-shadow: inset 2px 5px 10px rgba(0, 0, 0, 0.3) !important;
     transition: 300ms ease-in-out !important;
+    /* color: white !important; */
 }
 
 .css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input:focus {
-    background-color: white !important;
-    transform: scale(1.05) !important;
+    background-color: rgba(255, 255, 255, 0.089) !important;
+    transform: scale(1.0) !important;
     box-shadow: 18px 18px 100px #969696,
         -13px -13px 100px #ffffff !important;
 }
 
 .css-hjtp1-MuiInputBase-root-MuiOutlinedInput-root {
     border-radius: 15px !important;
+    color: rgb(17, 17, 17) !important;
 }
 
+.App {
+    background: url("https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8Nzl8fHxlbnwwfHx8fHw%3D") !important;
+}
+.pLowerNoACC{
+    color: rgb(168, 12, 12) !important;;
+}

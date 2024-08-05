@@ -187,7 +187,7 @@ const Login = () => {
                             <span className='logSign'>Login</span>
                         </Button>
                         {/* <ToastContainer /> */}
-                        <p>
+                        <p className='pLowerNoACC'>
                             Don't have an Account ?{" "}
                             <span
                                 className="hyper"
@@ -267,7 +267,7 @@ const Login = () => {
                             <span className='logSign'>Sign Up</span>
                         </Button>
                         {/* <ToastContainer /> */}
-                        <p >
+                        <p className='pLowerACC' >
                             Already have an Account ?
                             <span
 
