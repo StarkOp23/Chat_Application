@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
-import logo from './message-chat-1.svg'
+import logo from './techny-email-marketing-and-newsletter-with-new-message.gif'
 import { Backdrop, Button, CircularProgress, TextField } from '@mui/material'
 import { json, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 // import { toast, ToastContainer } from 'react-toastify';
 import Toaster from './Toaster';
+import "./myStyles.css";
 
 
 const Login = () => {
@@ -136,6 +137,7 @@ const Login = () => {
                 </div>
                 {showlogin && (
                     <div className="login-box">
+                        
                         <p className="login-text">Welcome Back !</p>
                         <TextField
                             onChange={changeHandler}
@@ -171,8 +173,18 @@ const Login = () => {
                             color="secondary"
                             onClick={loginHandler}
                             isLoading
+                            className='button'
+
                         >
-                            Login
+                            <div class="svg-wrapper-1">
+                                <div class="svg-wrapper">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                        <path fill="none" d="M0 0h24v24H0z"></path>
+                                        <path fill="currentColor" d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <span className='logSign'>Login</span>
                         </Button>
                         {/* <ToastContainer /> */}
                         <p>
@@ -242,11 +254,20 @@ const Login = () => {
                             variant="outlined"
                             color="secondary"
                             onClick={signUpHandler}
+                            className='button'
                         >
-                            Sign Up
+                            <div class="svg-wrapper-1">
+                                <div class="svg-wrapper">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                        <path fill="none" d="M0 0h24v24H0z"></path>
+                                        <path fill="currentColor" d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <span className='logSign'>Sign Up</span>
                         </Button>
                         {/* <ToastContainer /> */}
-                        <p>
+                        <p >
                             Already have an Account ?
                             <span
 

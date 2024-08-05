@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Grey+Qo&display=swap');
+
 .dark {
     background-color: #2d3941 !important;
     color: white !important;
@@ -232,7 +234,7 @@ input:focus {
 }
 
 .welcome-logo {
-    height: 20vw;
+    height: 30vw;
 }
 
 .welcome-container {
@@ -276,8 +278,11 @@ input:focus {
 }
 
 .login-text {
-    font-size: 2vw;
-    padding-bottom: 20px;
+    font-size: 4vw;
+    padding-bottom: 10px;
+    font-family: "Caveat", cursive;
+    color: black;
+
 }
 
 .login-box {
@@ -350,41 +355,149 @@ input:focus {
 .list-item:active {
     background-color: wheat;
 }
+
 .other-icons {
     display: flex;
     flex: 1;
     justify-content: space-evenly;
-  }
+}
 
 @media only screen and (max-width: 40em) {
     .sb-header {
         display: none;
     }
+
     .sb-conversations {
         display: none;
-      }
-      .sb-header {
+    }
+
+    .sb-header {
         flex-direction: column;
         flex: 1;
         width: min-content;
-      }
-      .other-icons {
+    }
+
+    .other-icons {
         flex-direction: column;
-      }
-      .chatArea-container {
+    }
+
+    .chatArea-container {
         flex: 1;
-      }
-      .sidebar-container {
+    }
+
+    .sidebar-container {
         flex: 0;
-      }
-      .main-container {
+    }
+
+    .main-container {
         height: 100vh;
         width: 100vw;
-      }
+    }
 }
 
-.hyper{
+.hyper {
     text-decoration: underline;
     cursor: pointer;
     color: rgb(21, 2, 34);
+    text-decoration: none;
+    padding: 3px;
+    /* display: flex; */
 }
+
+/* From Uiverse.io by eirikvold */
+.button {
+    font-family: inherit;
+    font-size: 18px;
+    background: linear-gradient(to bottom, #4dc7d9 0%, #66a6ff 100%);
+    color: white;
+    padding: 0.8em 1.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.button:active {
+    transform: scale(0.95);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.button span {
+    display: block;
+    margin-left: 0.4em;
+    transition: all 0.3s;
+}
+
+.button svg {
+    width: 18px;
+    height: 18px;
+    fill: white;
+    transition: all 0.3s;
+}
+
+.button .svg-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin-right: 0.5em;
+    transition: all 0.3s;
+}
+
+.button:hover .svg-wrapper {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.button:hover svg {
+    transform: rotate(45deg);
+}
+
+.logSign {
+    color: white !important;
+}
+
+
+
+.css-1l9sosn-MuiButtonBase-root-MuiButton-root {
+    padding: 10px 35px !important;
+}
+
+.css-1l9sosn-MuiButtonBase-root-MuiButton-root {
+    border: none !important;
+    color: white !important;
+    border-radius: 30px !important;
+}
+
+
+.css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input {
+    border: none !important;
+    outline: none !important;
+    border-radius: 15px !important;
+    padding: 1em !important;
+    background-color: #b4c5c7ce !important;
+    box-shadow: inset 2px 5px 10px rgba(0, 0, 0, 0.3) !important;
+    transition: 300ms ease-in-out !important;
+}
+
+.css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input:focus {
+    background-color: white !important;
+    transform: scale(1.05) !important;
+    box-shadow: 18px 18px 100px #969696,
+        -13px -13px 100px #ffffff !important;
+}
+
+.css-hjtp1-MuiInputBase-root-MuiOutlinedInput-root {
+    border-radius: 15px !important;
+}
+

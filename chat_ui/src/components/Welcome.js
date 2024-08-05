@@ -1,5 +1,5 @@
 import React from 'react'
-import logo from './message-chat-1.svg'
+import logo from './network-email-marketing-campaign-and-newsletter.gif'
 import './myStyles.css'
 
 
@@ -8,7 +8,7 @@ const Welcome = () => {
     return (
         <div className='welcome-container'>
             <img src={logo} alt='logo' className='welcome-logo' />
-            <p>Welcome to the Chat App . Chat Directly with the people in Chat Room</p>
+            <p>Engage in direct conversations with people.</p>
         </div>
     )
 }
