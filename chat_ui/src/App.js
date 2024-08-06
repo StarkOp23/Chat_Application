@@ -20,10 +20,10 @@ const App = () => {
         <Route path='/' element={<Login />} />
         <Route path='app' element={<MainContainer />} >
           <Route path='welcome' element={<Welcome />}></Route>
-          <Route path='chat' element={<ChatArea />}></Route>
-          <Route path='user' element={<Users />}></Route>
+          <Route path='chat/:id' element={<ChatArea />}></Route>
+          <Route path='users' element={<Users />}></Route>
           <Route path='groups' element={<Groups />}></Route>
-          <Route path='create_groups' element={<CreateGroups />}></Route>
+          <Route path='create-groups' element={<CreateGroups />}></Route>
           {/* Test */}
         </Route>
       </Routes>

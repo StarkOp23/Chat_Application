@@ -3,7 +3,7 @@ import "./myStyles.css";
 import SearchIcon from "@mui/icons-material/Search";
 import { IconButton } from "@mui/material";
 import RefreshIcon from "@mui/icons-material/Refresh";
-import logo from "./message-chat-1.svg";
+// import logo from "./message-chat-1.svg";
 import { useDispatch, useSelector } from "react-redux";
 import { AnimatePresence, motion } from "framer-motion";
 import axios from "axios";
@@ -34,7 +34,7 @@ function Users() {
         Authorization: `Bearer ${userData.data.token}`,
       },
     };
-    axios.get("http://localhost:8080/api/user/getall", config).then((data) => {
+    axios.get("http://localhost:8080/user/getall", config).then((data) => {
       console.log("User Data refreshed in Users panel ");
       setUsers(data.data);
       // setRefresh(!refresh);
@@ -54,7 +54,7 @@ function Users() {
       >
         <div className={"ug-header" + (lightTheme ? "" : " dark")}>
           <img
-            src={logo}
+            src={"https://cdn-icons-png.flaticon.com/128/476/476863.png"}
             style={{ height: "2rem", width: "2rem", marginLeft: "10px" }}
           />
           <p className={"ug-title" + (lightTheme ? "" : " dark")}>
@@ -94,7 +94,7 @@ function Users() {
                     },
                   };
                   axios.post(
-                    "http://localhost:8080/api/user/chat/",
+                    "http://localhost:8080/user/chat/",
                     {
                       userId: user._id,
                     },

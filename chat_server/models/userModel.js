@@ -25,18 +25,6 @@ userSchema.methods.matchPassword = async function (enteredPassword) {
     return await bcrypt.compare(enteredPassword, this.password);
 };
 
-// Pre-save hook to hash the password before saving
-// userSchema.pre('save', async function (next) {
-//     if (!this.isModified('password')) {
-//         // next();
-//     }
-
-//     let salt = await bcrypt.genSalt(10);
-//     this.password = await bcrypt.hash(this.password, salt);
-//     console.log("Hash password: ", this.password);
-//     // next();
-// });
-
 
 //* Don't use arrow function for pre method.
 //Pre-save hook to hash the password before saving

@@ -8,6 +8,7 @@ import Toaster from './Toaster';
 import "./myStyles.css";
 
 
+
 const Login = () => {
 
 
@@ -35,7 +36,7 @@ const Login = () => {
                     "Content-type": "application/json"
                 },
             };
-            const response = await axios.post("http://localhost:8080/api/user/login", data, config);
+            const response = await axios.post("http://localhost:8080/user/login", data, config);
             console.log("Login successful: ", response);
             setLogInStatus({ message: "success", key: Math.random() })
             setLoading(false);
@@ -96,7 +97,7 @@ const Login = () => {
             };
 
             const response = await axios.post(
-                "http://localhost:8080/api/user/register",
+                "http://localhost:8080/user/register",
                 data,
                 config
             );
@@ -131,13 +132,14 @@ const Login = () => {
             >
                 <CircularProgress color="secondary" />
             </Backdrop>
+
             <div className="login-container">
                 <div className="image-container">
                     <img src={logo} alt="Logo" className="welcome-logo" />
                 </div>
                 {showlogin && (
                     <div className="login-box">
-                        
+
                         <p className="login-text">Welcome Back !</p>
                         <TextField
                             onChange={changeHandler}
