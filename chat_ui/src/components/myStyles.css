@@ -8,7 +8,7 @@
 
 
 .main-container {
-    background-color: rgb(191, 214, 234);
+    /* background-color: rgb(191, 214, 234); */
     height: 90vh;
     width: 90vw;
     display: flex;
@@ -19,6 +19,12 @@
     flex: 0.3;
     display: flex;
     flex-direction: column;
+    background: rgba(64, 177, 191, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .chatArea-container {
@@ -249,6 +255,18 @@ input:focus {
     /* border-bottom: 5px solid #63d7b0; */
     background: url("https://img.freepik.com/free-photo/blue-concrete-textured-background_53876-139902.jpg?size=626&ext=jpg&ga=GA1.1.1308959851.1722339978&semt=ais_hybrid");
     border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, .25);
+    border-radius: 20px;
+    /* background-color: rgba(255, 255, 255, 0.45); */
+    /* box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.25); */
+    background: rgba(64, 177, 191, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    backdrop-filter: blur(8px);
 }
 
 .createGroups-container {
@@ -269,6 +287,12 @@ input:focus {
     border-radius: 20px;
     display: flex;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background: rgba(64, 177, 191, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .image-container {
@@ -301,8 +325,14 @@ input:focus {
     align-items: center;
     gap: 20px;
     border: 3px ridge rgba(0, 0, 0, 0.575);
+    background: rgba(64, 177, 191, 0.2);
+    box-shadow: 0 8px 25px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
 
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(0.10em);
 
 }
 
@@ -311,6 +341,12 @@ input:focus {
     flex: 0.7;
     display: flex;
     flex-direction: column;
+    background: rgba(64, 177, 191, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .ug-header {
@@ -511,8 +547,22 @@ input:focus {
 }
 
 .App {
-    background: url("https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8Nzl8fHxlbnwwfHx8fHw%3D") !important;
+    background: url("https://cdn.dribbble.com/users/2156796/screenshots/19992280/media/7d2ee3a4d15d1f335419059066067694.gif") !important;
+    background-size: contain;
 }
-.pLowerNoACC{
-    color: rgb(168, 12, 12) !important;;
+
+.pLowerNoACC {
+    color: rgb(168, 12, 12) !important;
+    ;
+}
+
+.welcomeMsg {
+    color: black;
+    font-family: "Caveat", cursive;
+    font-size: large !important;
+    font-weight: bold !important;
+}
+
+.pLowerACC {
+    color: black;
 }

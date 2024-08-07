@@ -42,7 +42,7 @@ function Sidebar() {
             },
         };
 
-        axios.get("http://localhost:8080/user/chat/", config).then((response) => {
+        axios.get("http://localhost:8080/chat/", config).then((response) => {
             console.log("Data refresh in sidebar ", response.data);
             setConversations(response.data);
             // setRefresh(!refresh);
@@ -50,7 +50,7 @@ function Sidebar() {
             .catch((error) => {
                 console.error("The error is :", error);
             });
-    }, [refresh]);
+    }, [user.token, refresh]);
 
     return (
         <div className="sidebar-container">
