@@ -8,7 +8,7 @@ let accessChat = async (req, res) => {
 
     if (!userId) {
         console.log("UserId not sent to the server");
-        return res.sendStatus(404);
+        return res.sendStatus(400);
     }
 
     let isChat = await Chat.find({
@@ -55,21 +55,19 @@ let accessChat = async (req, res) => {
         }
     }
 }
-
 let fetchedChats = async (req, res) => {
     try {
-
-        Chat.find({ users: { $elematch: { $eq: req.user._id } } })
+        let results = await Chat.find({ users: { $elemMatch: { $eq: req.user._id } } })
             .populate("users", "-password")
             .populate("groupAdmin", "-password")
             .populate("latestMessage")
-            .sort({ updatedAt: -1 })
-            .then(async (results) => {
-                results = await User.populate(results, {
-                    path: "latestMessage.sender",
-                    select: "name email"
-                })
-            })
+            .sort({ updatedAt: -1 });
+
+        results = await User.populate(results, {
+            path: "latestMessage.sender",
+            select: "name email"
+        });
+
         res.status(200).json(results);
 
     } catch (error) {

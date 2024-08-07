@@ -7,7 +7,7 @@ const { authToken } = require('../middleware/authmiddle');
 
 Router.post('/login', loginController);
 Router.post('/register', registerController);
-Router.get('/getall', getAllUsers);
+Router.get('/getall', authToken, getAllUsers);
 
 
 module.exports = Router

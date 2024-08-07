@@ -4,7 +4,7 @@ const { allMessages, sendMessage } = require('../controllers/messageController')
 const router = express.Router();
 
 router.route('/:chat').get(authToken, allMessages);
-router.route('/allMessages').get(authToken, sendMessage);
+router.route('/').post(authToken, sendMessage);
 
 
 module.exports = router;
