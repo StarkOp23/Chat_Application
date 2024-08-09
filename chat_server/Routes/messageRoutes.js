@@ -1,10 +1,13 @@
-const express = require('express');
-const { authToken } = require('../middleware/authmiddle');
-const { allMessages, sendMessage } = require('../controllers/messageController');
+const express = require("express");
+const {
+  allMessages,
+  sendMessage,
+} = require("../controllers/messageController");
+const { protect } = require("../middleware/authMiddleware");
+
 const router = express.Router();
 
-router.route('/:chat').get(authToken, allMessages);
-router.route('/').post(authToken, sendMessage);
-
+router.route("/:chatId").get(protect, allMessages);
+router.route("/").post(protect, sendMessage);
 
 module.exports = router;

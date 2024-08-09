@@ -1,7 +1,7 @@
 const express = require('express');
 
 const Message = require('../models/messageModel');
-const Chat = require('../models/chatModels');
+const Chat = require('../models/chatModel');
 const User = require('../models/userModel');
 
 let allMessages = async (req, res) => {

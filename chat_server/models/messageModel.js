@@ -1,29 +1,28 @@
-// const { string } = require('joi');
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
-const messageSchema = mongoose.Schema({
+const messageModel = mongoose.Schema(
+  {
     sender: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'User'
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
     },
     content: {
-        type: String,
-        trim: true
+      type: String,
+      trim: true,
     },
-    receiver: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'User'
+    reciever: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
     },
     chat: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Chat'
-    }
-},
-
-    {
-        timestamps: true
-    }
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Chat",
+    },
+  },
+  {
+    timeStamp: true,
+  }
 );
 
-const Message = mongoose.model("Message", messageSchema)
+const Message = mongoose.model("Message", messageModel);
 module.exports = Message;
