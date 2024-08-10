@@ -1,8 +1,9 @@
 const mongoose = require('mongoose');
 
-mongoose.connect(process.env.PROD_URL).
-then(()=>{
-    console.log('Connected to MongoDB');
-}).catch((err)=>{
-    console.log(err);
-})
+mongoose.connect(process.env.PROD_URL)
+    .then(() => {
+        console.log('Connected to MongoDB');
+    })
+    .catch((err) => {
+        console.log(err);
+    })
