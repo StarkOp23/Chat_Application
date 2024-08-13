@@ -28,4 +28,43 @@ app.use(notFound);
 app.use(errorHandler);
 
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, console.log(`Server is Running on Port ${PORT}...`));
+const server = app.listen(PORT, console.log(`Server is Running on Port ${PORT}...`));
+
+// Implementing Socket.io
+
+const io = require('socket.io')(server,
+  {
+    cors: {
+      origin: '*',
+    },
+    pingTimeout: 60000,
+  }
+)
+
+io.on('connection', (socket) => {
+
+  // 
+  socket.on("setup", (user) => {
+    socket.join(user.data._id);
+    socket.emit("connected")
+  })
+
+  // 
+  socket.on("join chat", (room) => {
+    socket.join(room);
+  })
+
+  socket.on("new message", (newMessageStatus) => {
+    var chat = newMessageStatus.chat;
+    if (!chat.users) {
+      return console.log("chat.users not defined");
+    }
+    chat.users.forEach((user) => {
+      if (user._id == newMessageStatus.sender._id) return;
+
+      socket.in(user._id).emit("message recieved", newMessageReceived)
+    })
+  })
+
+
+})

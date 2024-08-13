@@ -48,7 +48,7 @@ function CreateGroups() {
       "http://localhost:8080/chat/createGroup",
       {
         name: groupName,
-        users: '["647d94aea97e40a17278c7e5","647d999e4c3dd7ca9a2e6543"]',
+        users: '["66b5c9e2c9dd702d69ff40cf","66b5e2ce7077dd1c9711109b" , "66b5e33c7077dd1c97111135"]',
       },
       config
     );
